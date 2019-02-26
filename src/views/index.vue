@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <Home/>  
+  </div>
+</template>
+
+<script>
+import Home from './Home'
+
+  export default {
+    name:'index',
+    components:{
+      Home
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>

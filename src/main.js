@@ -3,9 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import fastClick from 'fastclick'
-import './assets/normalize.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import './assets/normalize.css'
+import './assets/reset.css'
 import './assets/border.css'
+import './assets/iconfont.css'
+import 'swiper/dist/css/swiper.css'
 
+Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 
@@ -14,3 +19,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+ 
