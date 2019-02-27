@@ -24,7 +24,7 @@
 </script>
 
 <style scoped lang='stylus'>
-   @import '../assets/varibles.styl'
+   @import '../../assets/varibles.styl'
 
   .header
     display :flex
