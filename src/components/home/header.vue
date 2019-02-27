@@ -3,22 +3,26 @@
 <template>
   <div class='header'>
     <div class="header-left">
-      <span class="iconfont header-left-icon">&#xe6dc;</span>
+      <span class="iconfont header-left-icon">&#xe68e;</span>
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe617;</span>
       请输入想去的地方
     </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont">&#xe682;</span>
-    </div>
+    <router-link to='/city'>
+      <div class="header-right">
+        城市
+        <span class="iconfont">&#xe682;</span>
+      </div>
+    </router-link>
+    
   </div>
 </template>
 
 <script>
  
   export default {
+    name:'HomeHeader',
     
   }
 </script>
@@ -29,9 +33,9 @@
   .header
     display :flex
     background-color:$bgColor;
-    height:0.86rem
+    height:$headerHeight
     color :#fff
-    line-height :0.86rem
+    line-height :$headerHeight
     .header-left
       width:1.2rem 
       float:left
@@ -52,5 +56,6 @@
       width:1.2rem
       float:right
       text-align center
+      color #fff
 
 </style>
