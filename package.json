@@ -6,9 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "server":"webpack-dev-server "
+    "server": "webpack-dev-server "
   },
   "dependencies": {
+    "better-scroll": "^1.14.1",
     "fastclick": "^1.0.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
