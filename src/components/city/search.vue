@@ -6,7 +6,6 @@
         class='search-input'
         placeholder="请输入城市名或拼音"
         v-model="keyword"
-
       >
     </div>
     <div 
@@ -49,13 +48,21 @@ export default {
         timer:null
     }
   },
+  methods: {
+    handleCityClick(city){
+      //用 dispatch 将 数据 派发到store
+      this.$store.dispatch('changeCity',city)
+      this.keyword=''
+      this.$router.push('/')
+    }
+  },
   computed: {
     hasNoData () {
       return !this.list.length
     }
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.search)
+    this.scroll = new Bscroll(this.$refs.search,{click: true})
   },
   watch: {
     keyword(){

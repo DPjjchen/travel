@@ -18,11 +18,11 @@
 
 <script>
 import axios from 'axios'
-
 import Header from '../components/city/header'
 import Search from '../components/city/search'
 import CityList from '../components/city/List'
 import Alphabet from '../components/city/Alphabet'
+import {mapState} from 'vuex'
 
 export default {
   name:'City',
@@ -34,6 +34,7 @@ export default {
   },
   data(){
     return{
+      lastCity:'',
       cities:{},
       hotCities:[],
       letter:''
@@ -57,9 +58,13 @@ export default {
     }
 
   },
+  computed: {
+    ...mapState(['city'])
+  },
   mounted(){
     this.getCityInfo()
-  }
+  },
+  
 
 }
 </script>
