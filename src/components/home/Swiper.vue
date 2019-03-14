@@ -23,6 +23,8 @@ export default {
         pagination:{
           el:'.swiper-pagination'
         },
+        observeParents: true,
+        observer: true,
         loop:true,
       },
       swiperList:[

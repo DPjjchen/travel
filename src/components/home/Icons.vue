@@ -22,7 +22,9 @@
     data () {
     return {
         swiperOption: {
-          autoplay: false
+          autoplay: false,
+          observeParents: true,
+          observer: true,
         }
       }
     },
