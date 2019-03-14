@@ -15,6 +15,8 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
+        //在target处 修改端口  即可与后端联调
+        // 也可以填写 服务器的 IP地址
         target: 'http://localhost:8080',
         changeOrigin: true,
         pathRewrite: {
