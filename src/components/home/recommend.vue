@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <div
+      <router-link 
         tag="li"
         class="item border-bottom"
         v-for="item of list"
@@ -15,7 +15,7 @@
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </div>
+      </router-link>
     </ul> 
   </div>
 </template>
@@ -23,35 +23,8 @@
 <script>
   export default {
     name:'recommend',
-    data(){
-      return{
-        list:[
-          {
-            id:'1',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1602/9c/39c5ce9ff58609.jpg_r_640x214_efb90102.jpg',
-            title:'粤西泡汤圣地',
-            desc:'自驾粤西，这里有最全最心仪的温泉池，环境优美，舒舒服服的泡个热汤，远离繁忙的工作'
-          },
-          {
-            id:'2',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1602/9c/39c5ce9ff58609.jpg_r_640x214_efb90102.jpg',
-            title:'粤西泡汤圣地',
-            desc:'自驾粤西，这里有最全最心仪的温泉池，环境优美，舒舒服服的泡个热汤，远离繁忙的工作'
-          },
-          {
-            id:'3',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1602/9c/39c5ce9ff58609.jpg_r_640x214_efb90102.jpg',
-            title:'粤西泡汤圣地',
-            desc:'自驾粤西，这里有最全最心仪的温泉池，环境优美，舒舒服服的泡个热汤，远离繁忙的工作'
-          },
-          {
-            id:'4',
-            imgUrl:'http://img1.qunarzz.com/sight/source/1602/9c/39c5ce9ff58609.jpg_r_640x214_efb90102.jpg',
-            title:'粤西泡汤圣地',
-            desc:'自驾粤西，这里有最全最心仪的温泉池，环境优美，舒舒服服的泡个热汤，远离繁忙的工作'
-          },
-        ]
-      }
+    props:{
+      list:Array
     }
   }
 </script>
